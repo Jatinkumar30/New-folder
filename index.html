@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+    lucide.createIcons();
+</script>
+<script src="script.js"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="top-nav">
+            <div class="logo">LOGO</div>
+            <div class="search-container">
+                <div class="category-dropdown">
+                    <button class="dropdown-btn">All Categories</button>
+                    <div class="dropdown-content">
+                        <a href="#">Rings</a>
+                        <a href="#">Earrings</a>
+                        <a href="#">Bracelets</a>
+                        <a href="#">Pendants</a>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+            <div class="support">
+                <img src="banner.png" alt="Support" class="support-avatar">
+                <div class="support-info">
+                    <div class="phone">987 654 3210</div>
+                    <div class="support-text">24/7 Support</div>
+                </div>
+            </div>
+            <button type="button" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <div class="bottom-nav">
+            <ul class="nav-links">
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Rings</a></li>
+                <li><a href="#">Earrings</a></li>
+                <li><a href="#">Bracelets</a></li>
+                <li><a href="#">Pendants</a></li>
+                <li><a href="#">Bespoke Jewelry</a></li>
+                <li><a href="#">Gifting</a></li>
+                <li><a href="#" class="new-arrival">New Arrival</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+            
+            <div class="nav-icons">
+                <a href="#" class="icon-link">
+                    <span class="icon">♥</span>
+                    <span class="icon-text">Wishlist</span>
+                </a>
+                <a href="#" class="icon-link">
+                    <span class="icon">🛒</span>
+                    <span class="icon-text">Cart</span>
+                </a>
+                <a href="#" class="icon-link">
+                    <span class="icon">👤</span>
+                    <span class="icon-text">Account</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <section class="hero container">
+        <!-- <div class="hero-content">
+            <h1>
+                <span class="script">perfect</span> gold jewellery
+                <br>
+                to match your <span class="script">style</span>
+            </h1>
+        </div> -->
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <div class="category-grid">
+                <a href="/rings" class="category-card">
+                    <div class="category-image">
+                        <img src="https://kinclimg3.bluestone.com/f_jpg,c_scale,w_828,q_80,b_rgb:f0f0f0/giproduct/BIDG0319R180_YAA18DIG6XXXXXXXX_ABCD00-PICS-00001-1024-66194.png" alt="Luxury Diamond Rings">
+                    </div>
+                    <h2>Rings</h2>
+                </a>
+                
+                <a href="/earrings" class="category-card">
+                    <div class="category-image">
+                        <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/25896410/2023/11/16/d894b7e5-ae15-4404-a253-a00a5f5097831700122632482SarafRSJewelleryGold-TonedQuirkyChandbalisEarrings1.jpg" alt="Diamond Earrings">
+                    </div>
+                    <h2>Earrings</h2>
+                </a>
+                
+                <a href="/bracelets" class="category-card">
+                    <div class="category-image">
+                        <img src="https://m.media-amazon.com/images/I/81nn+WTyZBL.jpg" alt="Diamond Bracelets">
+                    </div>
+                    <h2>Bracelets</h2>
+                </a>
+                
+                <a href="/pendants" class="category-card">
+                    <div class="category-image">
+                        <img src="https://vibewithmoi.in/cdn/shop/products/photopendanthires.jpg?v=1712571195" alt="Diamond Pendants">
+                    </div>
+                    <h2>Pendants</h2>
+                </a>
+                
+                <a href="/necklace" class="category-card">
+                    <div class="category-image">
+                        <img src="https://www.arundhatijewellers.com/shop/wp-content/uploads/2024/04/necklace-long-37.jpg" alt="Diamond Necklace">
+                    </div>
+                    <h2>Necklace</h2>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="product-section">
+        <h2>Best at JBA</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxByT4wDJuJDLUUcYEijEvzo9ebM7SvKAdAg&s" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxByT4wDJuJDLUUcYEijEvzo9ebM7SvKAdAg&s" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxByT4wDJuJDLUUcYEijEvzo9ebM7SvKAdAg&s" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxByT4wDJuJDLUUcYEijEvzo9ebM7SvKAdAg&s" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxByT4wDJuJDLUUcYEijEvzo9ebM7SvKAdAg&s" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <!-- Repeat the product-card div 3 more times with different images -->
+            </div>
+        </div>
+        <button class="nav-btn prev">❮</button>
+        <button class="nav-btn next">❯</button>
+    </section>
+
+    <img style="margin-left: 8%;" class="shine" src="shine.png" alt="">
+    
+
+    <section class="product-section">
+        <h2>New Arrival</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="product-card">
+                    <img src="https://www.baunat.com/library/photos/15453389_afbeelding1d.png" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.baunat.com/library/photos/15453389_afbeelding1d.png" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.baunat.com/library/photos/15453389_afbeelding1d.png" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.baunat.com/library/photos/15453389_afbeelding1d.png" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.baunat.com/library/photos/15453389_afbeelding1d.png" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <!-- Repeat the product-card div 3 more times with different images -->
+            </div>
+        </div>
+        <button class="nav-btn prev">❮</button>
+        <button class="nav-btn next">❯</button>
+    </section>
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card bespoke">
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h2>BESPOKE<br>DESIGN SERVICE</h2>
+                    </div>
+                </div>
+                <div class="service-card gifting">
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h2>JEWELRY<br>GIFTING</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="diamond-collection">
+        <div class="container">
+            <div class="collection-content">
+                <div class="collection-image">
+                    <img src="diamond.png" alt="Diamond Collection">
+                </div>
+                <div class="collection-text">
+                    <h2>Diamond Collections</h2>
+                    <p>Explore among various shapes and cuts</p>
+                </div>
+                <div class="collection-cta">
+                    <a href="#" class="explore-button">Explore Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <h2>Recently Viewed</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="product-card">
+                    <img src="https://www.matthewsjewellers.com/cdn/shop/files/DSC_5140.jpg?v=1714101468&width=1090" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.matthewsjewellers.com/cdn/shop/files/DSC_5140.jpg?v=1714101468&width=1090" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.matthewsjewellers.com/cdn/shop/files/DSC_5140.jpg?v=1714101468&width=1090" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.matthewsjewellers.com/cdn/shop/files/DSC_5140.jpg?v=1714101468&width=1090" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.matthewsjewellers.com/cdn/shop/files/DSC_5140.jpg?v=1714101468&width=1090" alt="Pearl Diamond Ring">
+                    <div class="product-info">
+                        <div class="rating">★★★★★</div>
+                        <h3>Pearl Diamond Ring</h3>
+                        <p>SKU:JBA12R23</p>
+                        <div class="price-add">
+                            <span class="price">₹ 3320</span>
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="hover-buttons">
+                        <button class="icon-btn">♥</button>
+                        <button class="icon-btn">🔍</button>
+                        <button class="icon-btn">⇄</button>
+                    </div>
+                </div>
+                <!-- Repeat the product-card div 3 more times with different images -->
+            </div>
+        </div>
+        <button class="nav-btn prev">❮</button>
+        <button class="nav-btn next">❯</button>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Certified Jewelry</h3>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Best Design</h3>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="gem"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Bespoke Jewelry</h3>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="rotate-ccw"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Easy Return</h3>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="shield"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Secure Shipping</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonial-container">
+                <div class="testimonial-left">
+                    <div class="quote-mark">"</div>
+                    <h2>Customer Says</h2>
+                    <p>Stories of people admired<br>by JBA jewelry</p>
+                    <div class="rating">
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-right">
+                    <div class="testimonial-content">
+                        <h3>Sushil Behera</h3>
+                        <p>I buy my daughters birthday gift every year at bluestone.. and my daughter really loves it.. I really appreciate the products delivered as before the said date and even the quality of the product..</p>
+                    </div>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i data-lucide="pinterest"></i>
+                    </a>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Why Buy From Us?</a></li>
+                            <li><a href="#">Our Certifications</a></li>
+                            <li><a href="#">Press Room</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Corporate Gifting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Policies</h3>
+                        <ul>
+                            <li><a href="#">30-Day Returns</a></li>
+                            <li><a href="#">Lifetime Exchange & Buy back</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Jewelry Guide</h3>
+                        <ul>
+                            <li><a href="#">Buying and Price Guide</a></li>
+                            <li><a href="#">Certification Guide</a></li>
+                            <li><a href="#">Diamond and Solitaire Guide</a></li>
+                            <li><a href="#">Gemstone Guide</a></li>
+                            <li><a href="#">Gifting Guide</a></li>
+                            <li><a href="#">Jewellery Care Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column newsletter">
+                        <h3>News Letter</h3>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Sign up to be a JBA insider">
+                            <button type="submit">
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script> lucide.createIcons();</script>
+
+    <script src="script.js"> </script>
+</body>
+</html>
