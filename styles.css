@@ -205,75 +205,80 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
+  }
 
-.search-container {
+  .support{
+    display: none;
+  }
+
+  .search-container {
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-bottom: 10px; /* Reduced bottom margin to reduce gap */
-}
+  }
 
-.category-dropdown {
+  .category-dropdown {
     width: 100%;
     margin-bottom: 10px;
-}
+  }
 
-.search-box {
+  .search-box {
     width: 100%;
-}
+    display: none;
+  }
 
-.bottom-nav {
+  .bottom-nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin-top: 10px; /* Reduced top margin to reduce gap */
-}
+    /* Reduced top margin to reduce gap */
+  }
 
-.nav-links {
+  .nav-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0; /* Removed margin-top to reduce gap */
     padding: 0;
     width: 100%;
-}
+  }
 
-.nav-links li {
-    margin: 8px 15px; /* Slightly reduced spacing between items */
+  .nav-links li {
+    margin: 0 15px; /* Slightly reduced spacing between items */
     font-size: 14px; /* Reduced font size for mobile */
-}
+  }
 
-.nav-links li a {
+  .nav-links li a {
     text-decoration: none;
     color: #333;
     padding: 5px 10px;
-}
+  }
 
-.nav-icons {
-    display: flex;
+  .nav-icons {
+    display: none;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 10px; /* Reduced top margin */
     width: 100%;
-}
+  }
 
-.nav-icons .icon-link {
+  .nav-icons .icon-link {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 10px; /* Added space between icons */
-}
+  }
 
-.icon {
+  .icon {
     font-size: 16px; /* Reduced icon size for mobile */
     margin-right: 5px;
-}
+  }
 
-.icon-text {
+  .icon-text {
     font-size: 12px; /* Reduced font size for mobile */
-}
+  }
 }
 
 .hero {
