@@ -30,28 +30,51 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Selected category:', selectedCategory);
     });
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const bottomNav = document.querySelector('.bottom-nav');
 
-    console.log(hamburger); // Should log the hamburger element
-    console.log(bottomNav); // Should log the bottom-nav element
 
-    if (hamburger && bottomNav) {
-        hamburger.addEventListener('click', () => {
-            console.log('Hamburger clicked'); // Check if the event is firing
-            bottomNav.classList.toggle('active');
-        });
-    } else {
-        console.error('Hamburger or BottomNav not found');
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.carousel');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const cards = document.querySelectorAll('.product-card');
+
+    let currentIndex = 0;
+    let cardsPerView = 4; // Default to 4 cards visible at a time
+
+    function updateCarousel() {
+        const containerWidth = carousel.offsetWidth;
+        const totalCardsWidth = containerWidth * cards.length / cardsPerView;
+        const translateX = -(currentIndex * (containerWidth / cardsPerView));
+        carousel.style.transform = `translateX(${translateX}px)`;  // Fixed line 68
     }
+
+    function showPrevCard() {
+        if (currentIndex > 0) currentIndex--;
+        updateCarousel();
+    }
+
+    function showNextCard() {
+        if (currentIndex < cards.length - cardsPerView) currentIndex++;
+        updateCarousel();
+    }
+
+    prevBtn.addEventListener('click', showPrevCard);
+    nextBtn.addEventListener('click', showNextCard);
+
+    // Update cards per view based on screen size
+    function updateCardsPerView() {
+        const isMobile = window.innerWidth < 768;
+        cardsPerView = isMobile ? 1 : 4; // Adjust based on breakpoints
+        currentIndex = 0; // Reset index
+        cards.forEach(card => {
+            card.style.flex = `0 0 ${100 / cardsPerView}%`;  // Fixed line 46
+        });
+        updateCarousel();
+    }
+
+    window.addEventListener('resize', updateCardsPerView);
+    updateCardsPerView(); // Initial call
 });
-
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     // Add loading animation for images
@@ -330,8 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="product-footer">
                         <div class="price">₹ ${product.price}</div>
                         <button class="add-to-cart">
-                            <i data-lucide="shopping-cart"></i>
-                            Add
+                            <i data-lucide="shopping-cart"></i> Add to Cart
                         </button>
                     </div>
                 </div>
@@ -339,96 +361,25 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    // Populate the product grid
-    productGrid.innerHTML = allProducts.map(createProductCard).join('');
+    // Function to render the products
+    function renderProducts() {
+        productGrid.innerHTML = allProducts.map(createProductCard).join('');
+    }
 
-    // Initialize Lucide icons
-    lucide.createIcons();
+    // Render products initially
+    renderProducts();
 
+    // Initialize carousel
     let currentIndex = 0;
-    const totalSlides = allProducts.length;
+    const cardsPerView = 4; // Default to 4 items visible
 
-    function updateSlider() {
-        const cardWidth = productGrid.querySelector('.product-card').offsetWidth;
-        productGrid.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    }
+    prevButton.addEventListener('click', () => {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        productGrid.style.transform = `translateX(-${currentIndex * 100 / cardsPerView}%)`;
+    });
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateSlider();
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateSlider();
-    }
-
-    nextButton.addEventListener('click', nextSlide);
-    prevButton.addEventListener('click', prevSlide);
-
-    // Responsive slider
-    function updateSliderResponsive() {
-        const viewportWidth = window.innerWidth;
-        let slidesToShow = 1;
-
-        if (viewportWidth >= 1280) {
-            slidesToShow = 4;
-        } else if (viewportWidth >= 1024) {
-            slidesToShow = 3;
-        } else if (viewportWidth >= 768) {
-            slidesToShow = 2;
-        }
-
-        productGrid.style.width = `${100 * (totalSlides / slidesToShow)}%`;
-        updateSlider();
-    }
-
-    window.addEventListener('resize', updateSliderResponsive);
-    updateSliderResponsive();
+    nextButton.addEventListener('click', () => {
+        currentIndex = Math.min(currentIndex + 1, allProducts.length - cardsPerView);
+        productGrid.style.transform = `translateX(-${currentIndex * 100 / cardsPerView}%)`;
+    });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carousel');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    const cards = document.querySelectorAll('.product-card');
-    
-    let currentIndex = 0;
-    const cardWidth = 100 / cards.length;
-    
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * cardWidth}%)`;
-    }
-    
-    function showPrevCard() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    }
-    
-    function showNextCard() {
-        if (currentIndex < cards.length - 1) {
-            currentIndex++;
-            updateCarousel();
-        }
-    }
-    
-    prevBtn.addEventListener('click', showPrevCard);
-    nextBtn.addEventListener('click', showNextCard);
-    
-    // Responsive behavior
-    function updateCardsPerView() {
-        const isMobile = window.innerWidth < 768;
-        cards.forEach(card => {
-            card.style.flex = isMobile ? '0 0 100%' : '0 0 25%';
-        });
-        currentIndex = 0;
-        updateCarousel();
-    }
-    
-    window.addEventListener('resize', updateCardsPerView);
-    updateCardsPerView(); // Initial call
-});
-
-

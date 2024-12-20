@@ -34,7 +34,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  padding: 10px 20px;
 }
 
 .logo {
@@ -96,6 +96,7 @@ body {
   padding: 0.5rem;
   border: none;
   outline: none;
+  padding: 5px;
 }
 
 .search-btn {
@@ -200,57 +201,79 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .support {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-  }
-
-  .bottom-nav {
-    display: none;
+  .top-nav {
     flex-direction: column;
-    background-color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.search-container {
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    position: absolute;
-    top: 60px; /* Adjust to match the height of your top-nav */
-    left: 0;
-    z-index: 999;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    margin-bottom: 10px; /* Reduced bottom margin to reduce gap */
+}
 
-  .bottom-nav.active {
-    display: flex; /* Use flex if the items are aligned in a row/column */
-    flex-direction: column; /* Ensure it stacks vertically for mobile view */
-    background-color: white; /* Optional: Background color */
-    padding: 10px; /* Optional: Add spacing */
-    position: absolute; /* Position to avoid shifting other elements */
-    top: 100%; /* Align just below the top-nav */
-    width: 100%; /* Full width */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
-    z-index: 999; /* Ensure it's above other elements */
-  }
+.category-dropdown {
+    width: 100%;
+    margin-bottom: 10px;
+}
 
-  .nav-links {
-    flex-direction: column;
-  }
+.search-box {
+    width: 100%;
+}
 
-  .nav-links li {
-    margin: 10px 0;
-  }
+.bottom-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px; /* Reduced top margin to reduce gap */
+}
 
-  .nav-icons {
-    flex-direction: column;
-    margin-top: 20px;
-  }
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0; /* Removed margin-top to reduce gap */
+    padding: 0;
+    width: 100%;
+}
 
-  .overlay.active {
-    display: block;
-  }
+.nav-links li {
+    margin: 8px 15px; /* Slightly reduced spacing between items */
+    font-size: 14px; /* Reduced font size for mobile */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px; /* Reduced top margin */
+    width: 100%;
+}
+
+.nav-icons .icon-link {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px; /* Added space between icons */
+}
+
+.icon {
+    font-size: 16px; /* Reduced icon size for mobile */
+    margin-right: 5px;
+}
+
+.icon-text {
+    font-size: 12px; /* Reduced font size for mobile */
+}
 }
 
 .hero {
